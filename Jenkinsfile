@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Frontend Build') {
             when {
-                changeset "**/edu-react/**/*"
+                changeset "**/server/**/*"
             }
             steps {
                 // Build and deploy frontend
@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Backend Build') {
             when {
-                changeset "**/edu-node/**/*"
+                changeset "**/client/**/*"
             }
             steps {
                 // Build and deploy backend
