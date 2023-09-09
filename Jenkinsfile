@@ -7,7 +7,7 @@ pipeline {
             }
             steps {
                 // Build and deploy frontend
-                sh 'cd edu-react && npm install && npm run build'
+                sh 'cd react-node-mysql-crud && npm i'
             }
         }
         stage('Backend Build') {
@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
                 // Build and deploy backend
-                sh 'cd edu-node && npm install && npm start'
+                sh 'cd react-node-mysql-crud && npm install && npm start'
             }
         }
     }
