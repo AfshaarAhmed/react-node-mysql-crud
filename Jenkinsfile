@@ -7,7 +7,7 @@ pipeline {
             }
             steps {
                 // Build and deploy frontend
-                sh 'cd /var/lib/jenkins/workspace/multibranch-pipeline_master/ && npm i'
+                sh 'cd /var/lib/jenkins/workspace/multibranch-pipeline_master && npm i'
             }
         }
         stage('Backend Build') {
