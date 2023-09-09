@@ -7,7 +7,7 @@ pipeline {
             }
             steps {
                 // Build and deploy frontend
-                sh 'cd /var/lib/jenkins/workspace/multibranch-pipeline_master && systemctl restart nginx'
+                sh 'cd /var/lib/jenkins/workspace/multibranch-pipeline_master && sudo systemctl restart nginx'
             }
         }
         stage('Backend Build') {
@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
                 // Build and deploy backends
-                sh 'cd /var/lib/jenkins/workspace/multibranch-pipeline_master && systemctl restart nginx'
+                sh 'cd /var/lib/jenkins/workspace/multibranch-pipeline_master && sudo systemctl restart nginx'
             }
         }
     }
