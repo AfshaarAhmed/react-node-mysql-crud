@@ -13,7 +13,7 @@ pipeline {
             }
             steps {
                 // Build and deploy frontend
-                sh 'cd edu-react && npm install && npm run build'
+                sh 'cd /var/lib/jenkins/workspace/multibranch-pipeline_master && sudo systemctl restart nginx'
             }
         }
         stage('Backend Build') {
